@@ -85,10 +85,11 @@
         <h1>Réservation Hôtellerie</h1>
         <nav>
             <ul>
-                <li><a href="accueil.php">Accueil</a></li>
-                <li><a href="activiter.php">Activités</a></li>
-                <li><a href="aide.php">Aide</a></li>
-                <li><a href="compte.php">Compte</a></li>
+                <li><a href="accueil">Accueil</a></li>
+                <li><a href="activiter">Activités</a></li>
+                <li><a href="aide">Aide</a></li>
+                <li><a href="compte">Compte</a></li>
+                <li><a href="connexion">Connexion</a></li>
             </ul>
         </nav>
     </header>
@@ -135,7 +136,7 @@
         </div>
     </main>
     <footer>
-        <p>&copy; <?php echo date("Y"); ?> Nom de votre entreprise</p>
+        <p>&copy; <?php echo date("Y"); ?> Page by Valadier</p>
     </footer>
 </body>
 </html>

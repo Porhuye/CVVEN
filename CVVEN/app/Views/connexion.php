@@ -2,7 +2,11 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?= base_url('css/styleConnexion.css') ?>">
+
+    <title>Connexion à CVVEN</title>
+
     <style>
         /* Reset CSS */
         body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dt, dd, ul, ol, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td {
@@ -47,7 +51,6 @@
             border-radius: 5px;
             background-color: #555;
         }
-
 
         /* Global styles */
         body {
@@ -101,26 +104,9 @@
         }
     </style>
 </head>
-<body>
-    
-    <h2>Inscription</h2>
+<body>  
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="accueil">Accueil</a></li>
-                <li><a href="reservation">Réservations</a></li>
-                <li><a href="activiter">Activités</a></li>
-                <li><a href="aide">Aide</a></li>
-                <li><a href="compte">Compte</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <!-- test -->
-        <!-- <img src="../../static/images/centreVacances.jpg"/> -->
-
-
+    <h2>Connexion à CVVEN</h2>
     <!-- Afficher les éventuels messages d'erreur ici -->
     <?php if (isset($error)) : ?>
         <p style="color: red;"><?php echo $error; ?></p>
@@ -132,25 +118,33 @@
         <?php endforeach; ?>
     <?php endif; ?>
 
-    <form name="inscription" method="post" action="<?= base_url('inscription.php') ?>">
-        <label for="email">Email:</label>
-        <input type="email" name="email" required>
+    <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="accueil">Accueil</a></li>
+                <li><a href="reservation">Réservations</a></li>
+                <li><a href="activiter">Activités</a></li>
+                <li><a href="aide">Aide</a></li>
+                <li><a href="compte">Compte</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <label for="password">Mot de passe:</label>
-        <input type="password" name="password" required>
+    <form method="post" name="connexion" action="<?= base_url('connexion.php') ?>">
+        <label for="email">E-mail:</label>
+        <input type="text" name="email" required><br>
 
-        <label for="nom">Nom:</label>
-        <input type="text" name="nom">
+        <label for="password">Mot de passe :</label>
+        <input type="password" name="password" required><br>
 
-        <label for="prenom">Prénom:</label>
-        <input type="text" name="prenom">
-
-        <button type="submit" name="register">S'inscrire</button>
+        <button type="submit" name="login">connexion</button>
     </form>
+
     <br>
-    <form method="post" name="form_redirect_login" action="<?php echo base_url('inscription.php'); ?>">
-        <label for="redirect_login">Déjà un compte ?</label>
-        <button type="submit" name="redirect_login">Se connecter</button>
+    <form method="post" name="form_redirect_register" action="<?php echo base_url('connexion.php'); ?>">
+        <label for="redirect_register">Vous n'avez pas de compte ?</label>
+        <button type="submit" name="redirect_register">S'inscrire</button>
     </form>
     <footer>
         <p>&copy; <?php echo date("Y"); ?> Page Faite Par Mercier Yoann.</p>

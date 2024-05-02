@@ -73,10 +73,11 @@
         <h1>Présentation d'activités</h1>
         <nav>
             <ul>
-                <li><a href="accueil.php">Accueil</a></li>
-                <li><a href="reservation.php">Réservations</a></li>
-                <li><a href="aide.php">Aide</a></li>
-                <li><a href="compte.php">Compte</a></li>
+                <li><a href="accueil">Accueil</a></li>
+                <li><a href="reservation">Réservations</a></li>
+                <li><a href="aide">Aide</a></li>
+                <li><a href="compte">Compte</a></li>
+                <li><a href="connexion">Connexion</a></li>
             </ul>
         </nav>
     </header>
